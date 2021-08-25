@@ -11,6 +11,8 @@ namespace GraphTutorial
         {
             "User.Read",
             "MailboxSettings.Read",
+            "Mail.ReadBasic",
+            "Files.Read",
             "Calendars.ReadWrite"
         };
     }

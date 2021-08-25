@@ -160,6 +160,11 @@ namespace GraphTutorial.Controllers
                 new QueryOption("endDateTime", endOfWeekUtc.ToString("o"))
             };
 
+            //var xxx = await _graphClient.Me.Messages.Request().GetAsync();//
+
+            //var yyy = await _graphClient.Me.Drive.Root.Children.Request().GetAsync();
+
+
             var events = await _graphClient.Me
                 .CalendarView
                 .Request(viewOptions)
