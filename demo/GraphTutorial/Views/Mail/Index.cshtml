@@ -1,0 +1,30 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<!-- <CalendarIndexSnippet> -->
+@model MailViewModel
+
+@{
+    ViewData["Title"] = "Mail";
+}
+
+<div class="mb-3">
+  <a class="btn btn-light btn-sm" asp-controller="Calendar" asp-action="New">New event</a>
+</div>
+<div class="calendar-week">
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody>
+          <partial name="_MailPartial" />
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- </CalendarIndexSnippet> -->

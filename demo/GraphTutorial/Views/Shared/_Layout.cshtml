@@ -31,9 +31,12 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                        <li class="@(controller == "Calendar" ? "nav-item active" : "nav-item")">
-                            <a class="nav-link" asp-area="" asp-controller="Calendar" asp-action="Index">Calendar</a>
-                        </li>
+                            <li class="@(controller == "Calendar" ? "nav-item active" : "nav-item")">
+                                <a class="nav-link" asp-area="" asp-controller="Calendar" asp-action="Index">Calendar</a>
+                            </li>
+                            <li class="@(controller == "Mail" ? "nav-item active" : "nav-item")">
+                                <a class="nav-link" asp-area="" asp-controller="Mail" asp-action="Index">Mail</a>
+                            </li>
                         }
                     </ul>
                     <partial name="_LoginPartial"/>

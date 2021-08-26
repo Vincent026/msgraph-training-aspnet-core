@@ -1,0 +1,36 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+<!-- <DailyEventsPartialSnippet> -->
+@model MailViewModel
+
+@{
+    bool dateCellAdded = false;
+    var timeFormat = User.GetUserGraphTimeFormat();
+}
+
+@if (Model.Events.Count() <= 0)
+{
+    // Render an empty row for the day
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+}
+
+@foreach (var item in Model.Events)
+{
+    <tr class="table-warning">
+        @if (!dateCellAdded)
+        {
+            // Only add the day cell once
+            dateCellAdded = true;
+            <td class="calendar-view-date-cell" rowspan="@Model.Events.Count()">
+            </td>
+        }
+        <td class="calendar-view-timespan">
+        </td>
+        <td>
+            <div class="calendar-view-subject">@item.Subject</div>
+        </td>
+    </tr>
+}
